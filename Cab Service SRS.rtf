@@ -1,0 +1,183 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial Black;}{\f1\fnil\fcharset0 Times New Roman;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset0 Calibri;}{\f4\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs40\lang9 Cab Service SRS\par
+
+\pard\sa200\sl276\slmult1\f1\par
+1. Introduction\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs22 Transportation makes our living easy, without trasportation the society may not develop.  The modern society cannot run without transport   facilities.   There   are  several   companies   who   give   transport   services   to   the individuals and corporate clients. In the current system, the client first contacts with the transport company for getting transport service. The company then books the vehicle for him on the requested date and time and then sends the vehicle to his place at the time.The Online cab booking system is the online service which will automate the process of booking a cab and will facilitate both the client and the company with reduced time and efforts. First the company will register his vehicles and the vehicles to the system. Then the client will request for booking a vehicle on his required date and time, providing allnecessary information. The fare will be calculated and client should confirm it. Then theemployee will serve the client on the specific date and time. Finally the client will have an opportunity to give a feedback for the service he got. \par
+\b\fs40 (i) Purpose of this document\par
+\b0\fs22 The purpose of this SRS document is to specify software requirements of the Online cab Booking. It is intended to be a complete specification of what functionality the system provides. The main purpose of the system is to automate the process of booking a cab online. They wanted to digitalise their cab management services system. They operate cabs locally and for long distance travels. They have a variety of cab models to offer to the customers. \par
+
+\pard\sa200\sl276\slmult1\b\fs40 (ii) Scope of this document\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs22 This project\rquote s aim is to cab search facility, login facility with two authentication such as captcha and a picture [OTP will be added later]Cab schedule details with fare shall be maintained [fare can change depending on when they book]Cab ticket booking details with tax shall be stored Feedback shall be collected.This enables things to be simplified and considerably quickened, making the jobs of the people involved easier. It supports the current process but centralizes it and makes it possible for decisions to be made earlier and easier way.\b\fs40\par
+
+\pard\sa200\sl276\slmult1\par
+3. Functional Requirements\par
+\fs32 Actors\par
+
+\pard 
+{\pntext\f1 i.\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0\fs22 Users\b\fs32\par
+{\pntext\f1 ii.\tab}\b0\fs22 Drivers\b\fs32\par
+{\pntext\f1 iii.\tab}\b0\fs22 Admin\b\fs32\par
+
+\pard\sa200\sl276\slmult1\f2\fs22 Users\par
+1.Registration Page\par
+
+\pard\sa200\sl276\slmult1\qj\b0 Registration page is the page where the user get signup. Registration page mainly includes the personal details of the user includes Fullname, E-mail, Phone number ,Gender ,Address,Pincode ,Password and username can be set accordingly at the registration page and confirmation done with the help of otp.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Phone Number:: Required field,10 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Gender:: Select from the options\par
+{\pntext\f4\'B7\tab}Address:: Min 5 characters,max 30 characters\par
+{\pntext\f4\'B7\tab}Pincode:: Mandotary field,6 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+{\pntext\f4\'B7\tab}OTP:: Mandotary field ,4 numeric digits\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\b 2.Login Page\b0\par
+Login page must contain username or email id and password, Email Id, Password. There is also an option for forget password.Login button provides login to the home page.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\b 3.Search Page\b0\par
+Search page consists of the search options for the cabs available at that time and the desination details of the cab.Date and the from & to time of the pick up should view in the search page .Search field accept characters and it search according to the typing and find the result as a list and if it not matches it view as the result is not found.The search field  may contain the name ,route and image. \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Place:: search field,mandotary field,alphanumeric characters\par
+{\pntext\f4\'B7\tab}Date:: select field,(DD/MM/YY) format,mandotary field\par
+{\pntext\f4\'B7\tab}Time:: select field,(HH/MM) format,mandotary field\par
+
+\pard\sa200\sl276\slmult1\qj While entering the invalid credinals the search field shows the option of "No result found".\par
+\b 4.Booking Page\b0\par
+The page contains the date , time, desinatition of the pickup and dropping .Date field should be in the format of (DD/MM/YY) and time in format of (HH:MM).It may contain the details of the cab such as cab name with characters,cab route, cab image and the rate.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Place:: search field,mandotary field,alphanumeric characters\par
+{\pntext\f4\'B7\tab}Date:: select field,(DD/MM/YY) format,mandotary field\par
+{\pntext\f4\'B7\tab}Time:: select field,(HH/MM) format,mandotary field\par
+{\pntext\f4\'B7\tab}Cab name:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}Cab route:: Mandotary field,\par
+{\pntext\f4\'B7\tab}Rate:: Numerical value \par
+
+\pard\sa200\sl276\slmult1\qj\par
+\par
+\b 5.Payment Page\par
+\b0 The payment page includes the field that accept the credit or debit card details of the user.The date  of expiry .The text field with 3 numeric character to get the CVV of the user's debit/ credit card detail.There is payment button for the payment.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Credit or debit card :: Mandotary field,12 numerical character\par
+{\pntext\f4\'B7\tab}Date of expiry :: (MM/YY) format,Mandotary field\par
+{\pntext\f4\'B7\tab}CVV:: Mandotary field,3 numerical digits\par
+{\pntext\f4\'B7\tab}Amount:: Mandotary field,Numerical digits\par
+{\pntext\f4\'B7\tab}OTP:: Mandotary field, 4 Numerical digits\par
+
+\pard\sa200\sl276\slmult1\qj When the OTP confirmation is done then the final confirmation for the payment is done.When all the payment is done an invoice is send to the user with details of cab name, user name, rate, desination .\par
+
+\pard\sa200\sl276\slmult1\b DRIVER\par
+1.Registration Page\par
+
+\pard\sa200\sl276\slmult1\qj\b0 Registration page mainly includes the personal details of the driver and the cab details. Full name , E-mail Id  , Phone number ,Gender .Pincode can be added accordingly with 6 digit numbers. Password and username can be set accordingly at the registration page and confirmation done with the help of otp.Address,pincode are other fields that included in the registration page. \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Phone Number:: Required field,10 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Gender:: Select from the options\par
+{\pntext\f4\'B7\tab}Address:: Min 5 characters,max 30 characters\par
+{\pntext\f4\'B7\tab}Pincode:: Mandotary field,6 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+{\pntext\f4\'B7\tab}OTP:: Mandotary field ,4 numeric digits\par
+
+\pard\sa200\sl276\slmult1\qj\par
+
+\pard\sa200\sl276\slmult1\b 2.Login Page\par
+
+\pard\sa200\sl276\slmult1\qj\b0 Login page must contain username, email id and password. Username field is a required field of the name of the driver. Password is the main element of the login page. There is also an option for forget password.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+
+\pard\sa200\sl276\slmult1\qj\par
+
+\pard\sa200\sl276\slmult1\b 3.Cab Details Page\par
+
+\pard\sa200\sl276\slmult1\qj\b0 Text fields to accept the details of the cab such as cab name ,cab number, cab routes .Cab schedule can be enter in the form of day time and route.The rate also can be acepted the field of rate per kilometers.Number of seats with input type as number.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Cab name:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}Cab registration number:: Mandotary field,Alpha numeric value,valid format\par
+{\pntext\f4\'B7\tab}Cab type:: Mandotary field,select field\par
+{\pntext\f4\'B7\tab}Cab Time:: Mandotary field,select field,(HH:MM)\par
+{\pntext\f4\'B7\tab}Rate per kilometers:: Mandotary field,alphanumeric value\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\par
+
+\pard\sa200\sl276\slmult1\b 4.Booking List View\par
+
+\pard\sa200\sl276\slmult1\qj\b0 List view includes the number of users bokking the cab which is in the numeric format.Next text field includes list of users who booked the cab with respect to time of booking.The driver have the option for the acceptance of the booking cab.Textfield to input cab schedule in the order,day,time, route.Textfield to view the list of users who paid the fair.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Cab type:: Mandotary field,select field\par
+{\pntext\f4\'B7\tab}Cab Time:: Mandotary field,select field,(HH:MM)\par
+{\pntext\f4\'B7\tab}Rate per kilometers:: Mandotary field,alphanumeric value\par
+{\pntext\f4\'B7\tab}Route:: Mandotary field,select field\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\par
+
+\pard\sa200\sl276\slmult1\b ADMIN\par
+1.Registration Page\par
+
+\pard\sa200\sl276\slmult1\qj\b0 Registration page includes the cab masters name, email Id.It also includes the personal details of the cab master such as the address field ,pincode and Phone number. Password can set in the registration page as alphanumeric with 8 characters.Confirmation of the password done through the OTP confirmation.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Phone Number:: Required field,10 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Gender:: Select from the options\par
+{\pntext\f4\'B7\tab}Address:: Min 5 characters,max 30 characters\par
+{\pntext\f4\'B7\tab}Pincode:: Mandotary field,6 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+{\pntext\f4\'B7\tab}OTP:: Mandotary field ,4 numeric digits\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\b 2.Login Page\par
+\b0 Login page must contain username or email id and password, Email Id, Password. There is also an option for forget password.Login button provides login to the home page.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Password:: Mandotary field,min 8 alphanumeric characters,max 16 characters\par
+
+\pard\sa200\sl276\slmult1\qj\b\par
+3.Users List Page\par
+\b0 Admin can see the details of the users .And also the booking details of cab and updation in the cab service. Admin can edit or cancel the details of users.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Phone Number:: Required field,10 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Route:: search field,mandotary field,alphanumeric characters\par
+{\pntext\f4\'B7\tab}Date:: select field,(DD/MM/YY) format,mandotary field\par
+{\pntext\f4\'B7\tab}Time:: select field,(HH/MM) format,mandotary field\par
+{\pntext\f4\'B7\tab}Cab name:: Mandotary field,Mini 1 character,max 20 character\par
+
+\pard\sa200\sl276\slmult1\qj\par
+\par
+\b 4.Driver List Page\par
+\b0 Admin can see the details of the drivers .And also the booking details of cab and updation in the cab service. Admin can edit or cancel the details of drivers.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Fullname:: Mandotary field,Mini 1 character,max 20 character\par
+{\pntext\f4\'B7\tab}E-mail Id:: Mandotary field,valid email format\par
+{\pntext\f4\'B7\tab}Phone Number:: Required field,10 numeric digits with non zero starting\par
+{\pntext\f4\'B7\tab}Route:: search field,mandotary field,alphanumeric characters\par
+{\pntext\f4\'B7\tab}Date:: select field,(DD/MM/YY) format,mandotary field\par
+{\pntext\f4\'B7\tab}Time:: select field,(HH/MM) format,mandotary field\par
+{\pntext\f4\'B7\tab}Cab name:: Mandotary field,Mini 1 character,max 20 character\par
+
+\pard\sa200\sl276\slmult1\f3\par
+\b\f1\fs40\par
+\par
+\par
+}
+ 
